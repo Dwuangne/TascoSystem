@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tasco.ProjectService.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55cc23f0cd096b546ad518da2fa9222348d9ec74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60feb0178d350c45dd3e1bb5db4cb9b0d047633e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tasco.ProjectService.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tasco.ProjectService.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

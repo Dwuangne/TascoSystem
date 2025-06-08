@@ -1,37 +1,6 @@
 version: '3.8'
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: sqlserver
-    environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: "Password123@"
-      MSSQL_PID: "Developer"
-    ports:
-      - "1434:1433"
-    restart: always
-    networks:
-      - app-network
-
-  projectservice:
-    build:
-      context: ./services/Tasco.ProjectService/Tasco.ProjectService.API
-      dockerfile: Dockerfile
-    container_name: projectservice
-    environment:
-      - ConnectionStrings__DefaultConnectionString=Server=sqlserver;Database=ProjectDb;User Id=sa;Password=Password123@;TrustServerCertificate=True
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:8080;https://+:8081
-    depends_on:
-      - sqlserver
-    ports:
-      - "5001:8080"   # HTTP
-      - "5002:8081"   # gRPC
-    restart: always
-    networks:
-      - app-network
-
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -60,10 +29,26 @@ services:
         condition: service_healthy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      # Email SMTP Configuration
+      - Email__Host=smtp.gmail.com
+      - Email__Port=587
+      - Email__SystemName=Tasco
+      - Email__Sender=moneymind392@gmail.com
+      - Email__Password=jhxa qrsl bcru ihra
+      # RabbitMQ Configuration
       - RabbitMQ__HostName=rabbitmq
       - RabbitMQ__Port=5672
       - RabbitMQ__UserName=admin
       - RabbitMQ__Password=admin123
+      - RabbitMQ__VirtualHost=/
+      - RabbitMQ__ExchangeName=notifications
+      - RabbitMQ__QueueName=notification-queue
+      - RabbitMQ__RoutingKey=notification
+      - RabbitMQ__Durable=true
+      - RabbitMQ__AutoDelete=false
+      - RabbitMQ__Exclusive=false
+      - RabbitMQ__RetryCount=3
+      - RabbitMQ__RetryDelay=00:00:05
     networks:
       - app-network
 

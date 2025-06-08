@@ -86,7 +86,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
         new NotificationMessage
         {
             Id = Guid.NewGuid().ToString(),
-            UserId = "ngoxuanson121@gmail.com",
+            UserId = "sonnxse170429@fpt.edu.vn",
             Title = "🎯 Task mới: Phát triển API Authentication",
             Message = "Chào Duy Quang! Bạn đã được giao task phát triển API Authentication cho hệ thống Tasco. Deadline: 30/01/2025. Chúc bạn coding vui vẻ! 🚀",
             Type = NotificationType.TaskAssigned,
@@ -101,7 +101,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
                 { "reporter", "Team Lead - Nguyễn Văn A" },
                 { "deadline", "2025-01-30T17:00:00Z" },
                 { "status", "To Do" },
-                { "email", "ngoxuanson121@gmail.com" },
+                { "email", "sonnxse170429@fpt.edu.vn" },
                 { "estimatedHours", "32" },
                 { "tags", "backend,authentication,security" }
             }
@@ -111,7 +111,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
         new NotificationMessage
         {
             Id = Guid.NewGuid().ToString(),
-            UserId = "ngoxuanson121@gmail.com",
+            UserId = "sonnxse170429@fpt.edu.vn",
             Title = "⏰ Nhắc nhở: Task sắp deadline!",
             Message = "Hi Duy Quang! Task \"Database Migration & Optimization\" sẽ đến deadline trong 2 ngày nữa (25/01/2025). Progress hiện tại: 75%. Keep going! 💪",
             Type = NotificationType.DeadlineReminder,
@@ -126,7 +126,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
                 { "deadline", "2025-01-25T18:00:00Z" },
                 { "progress", "75%" },
                 { "daysLeft", "2" },
-                { "email", "ngoxuanson121@gmail.com" },
+                { "email", "sonnxse170429@fpt.edu.vn" },
                 { "status", "In Progress" },
                 { "blockers", "Waiting for DBA review" }
             }
@@ -136,7 +136,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
         new NotificationMessage
         {
             Id = Guid.NewGuid().ToString(),
-            UserId = "ngoxuanson121@gmail.com",
+            UserId = "sonnxse170429@fpt.edu.vn",
             Title = "💬 Bình luận mới trên task của bạn",
             Message = "Senior Developer vừa comment: \"Code architecture looks solid! Just need to add more unit tests for edge cases. Overall great work Quang! 👏\"",
             Type = NotificationType.TaskCommentAdded,
@@ -151,7 +151,7 @@ static async Task SendTestMessages(IChannel channel, string queueName)
                 { "author", "Senior Dev - Trần Văn B" },
                 { "comment", "Code architecture looks solid! Just need to add more unit tests for edge cases. Overall great work Quang! 👏" },
                 { "commentId", "comment-" + Guid.NewGuid().ToString()[..8] },
-                { "email", "ngoxuanson121@gmail.com" },
+                { "email", "sonnxse170429@fpt.edu.vn" },
                 { "status", "In Review" },
                 { "reviewScore", "8/10" }
             }

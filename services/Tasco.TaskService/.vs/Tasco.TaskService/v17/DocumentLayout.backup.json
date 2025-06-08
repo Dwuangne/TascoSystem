@@ -1,58 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\TascoSystem\\services\\Tasco.TaskService\\",
+  "WorkspaceRootPath": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\mapping\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\mapping\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\grpcservices\\grpcprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\grpcservices\\grpcprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\repositories\\igenericrepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\repositories\\igenericrepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\implementations\\workareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\implementations\\workareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\interfaces\\iworkareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\interfaces\\iworkareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\businessmodels\\workareabusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\businessmodels\\workareabusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\taskmanagementdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\taskmanagementdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\taskmanagementdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\taskmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\taskmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\mapping\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\mapping\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\grpcservices\\grpcprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\grpcservices\\grpcprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\implementations\\workareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\implementations\\workareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\interfaces\\iworkareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\interfaces\\iworkareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.service\\businessmodels\\workareabusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F2D9A3D-6F26-4BA5-91B2-000E60A5C11C}|Tasco.TaskService.Service\\Tasco.TaskService.Service.csproj|solutionrelative:tasco.taskservice.service\\businessmodels\\workareabusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\taskmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\taskmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.repository\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA10D0C-1ED8-49D3-9721-04C43734BC4C}|Tasco.TaskService.Repository\\Tasco.TaskService.Repository.csproj|solutionrelative:tasco.taskservice.repository\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\protos\\project_service.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\term8\\prn232\\ass\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\protos\\project_service.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\protos\\project_service.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|e:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,28 +70,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1070,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 15,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseService.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BaseService.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\BaseService.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BaseService.cs",
-              "RelativeToolTip": "Tasco.TaskService.Service\\BaseService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IGenericRepositoryFactory.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Repositories\\IGenericRepositoryFactory.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Repositories\\IGenericRepositoryFactory.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Repositories\\IGenericRepositoryFactory.cs",
+              "RelativeToolTip": "Tasco.TaskService.Repository\\Repositories\\IGenericRepositoryFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:44:21.458Z",
+              "WhenOpened": "2025-06-08T06:27:58.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Tasco.TaskService.API\\appsettings.json",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\appsettings.json",
+              "RelativeToolTip": "Tasco.TaskService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-08T06:27:14.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BaseService.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\BaseService.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BaseService.cs",
+              "RelativeToolTip": "Tasco.TaskService.Service\\BaseService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:44:21.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AutoMapperProfiles.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
               "RelativeToolTip": "Tasco.TaskService.API\\Mapping\\AutoMapperProfiles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -92,24 +137,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Comment.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Comment.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Comment.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\Comment.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Comment.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Comment.cs",
               "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\Comment.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:34:33.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T02:34:33.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "SubTask.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\SubTask.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\SubTask.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\SubTask.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\SubTask.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\SubTask.cs",
               "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\SubTask.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -118,76 +162,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Task.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Task.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Task.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\Task.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Task.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\Task.cs",
               "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\Task.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwBgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:24:37.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T02:24:37.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkAreaService.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
+              "RelativeToolTip": "Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:22:53.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IWorkAreaService.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
+              "RelativeToolTip": "Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:22:35.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WorkAreaBusinessModel.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
+              "RelativeToolTip": "Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:22:26.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskManagementDbContext.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
+              "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwEIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:21:10.552Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WorkAreaService.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
-              "RelativeToolTip": "Tasco.TaskService.Service\\Implementations\\WorkAreaService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:22:53.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IWorkAreaService.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
-              "RelativeToolTip": "Tasco.TaskService.Service\\Interfaces\\IWorkAreaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:22:35.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WorkAreaBusinessModel.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
-              "RelativeToolTip": "Tasco.TaskService.Service\\BusinessModels\\WorkAreaBusinessModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:22:26.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TaskManagementDbContext.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
-              "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContext.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAuwEIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T02:21:10.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "TaskManagementDbContextFactory.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
               "RelativeToolTip": "Tasco.TaskService.Repository\\Entities\\TaskManagementDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -196,42 +235,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Program.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
               "RelativeToolTip": "Tasco.TaskService.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T01:39:17.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "GrpcProjectService.cs",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
               "RelativeToolTip": "Tasco.TaskService.API\\GrpcServices\\GrpcProjectService.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAuwCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T01:38:20.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T01:38:20.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "project_service.proto",
-              "DocumentMoniker": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Protos\\project_service.proto",
+              "DocumentMoniker": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Protos\\project_service.proto",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Protos\\project_service.proto",
-              "ToolTip": "E:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Protos\\project_service.proto",
+              "ToolTip": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Protos\\project_service.proto",
               "RelativeToolTip": "Tasco.TaskService.API\\Protos\\project_service.proto",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-06-02T01:22:38.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T01:22:38.232Z"
             }
           ]
         }

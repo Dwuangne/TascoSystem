@@ -11,4 +11,8 @@
     <Folder Include="Services\Interface\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tasco.ProjectService.Repository\Tasco.ProjectService.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

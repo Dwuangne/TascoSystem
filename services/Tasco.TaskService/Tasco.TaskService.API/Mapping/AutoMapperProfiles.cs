@@ -34,13 +34,37 @@ namespace Tasco.TaskService.API.Mapping
 			// WorkTask mappings
 			CreateMap<Protos.WorkTaskRequest, WorkTaskBusinessModel>()
 				.ForMember(dest => dest.WorkAreaId, opt => opt.MapFrom(src => Guid.Parse(src.WorkAreaId)))
+				.ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+				.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+				.ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority))
+				.ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+				.ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => DateTime.Now))
 				.ForMember(dest => dest.StartDate, opt => opt.MapFrom(src => DateTime.Parse(src.StartDate)))
 				.ForMember(dest => dest.EndDate, opt => opt.MapFrom(src => DateTime.Parse(src.EndDate)))
 				.ForMember(dest => dest.DueDate, opt => opt.MapFrom(src => DateTime.Parse(src.DueDate)));
 
-			CreateMap<WorkTaskBusinessModel, WorkTask>()
+            CreateMap<Payload.Request.WorkTaskRequest, WorkTaskBusinessModel>()
 				.ForMember(dest => dest.WorkAreaId, opt => opt.MapFrom(src => src.WorkAreaId))
+				.ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+				.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+				.ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority))
+				.ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+				.ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => DateTime.Now))
 				.ForMember(dest => dest.StartDate, opt => opt.MapFrom(src => src.StartDate))
+				.ForMember(dest => dest.EndDate, opt => opt.MapFrom(src => src.EndDate))
+				.ForMember(dest => dest.DueDate, opt => opt.MapFrom(src => src.DueDate));
+
+
+            CreateMap<WorkTaskBusinessModel, WorkTask>()
+				.ForMember(dest => dest.WorkAreaId, opt => opt.MapFrom(src => src.WorkAreaId))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => DateTime.Now))
+                .ForMember(dest => dest.DisplayOrder, opt => opt.MapFrom(src => src.DisplayOrder))
+                .ForMember(dest => dest.Progress, opt => opt.MapFrom(src => src.Progress))
+                .ForMember(dest => dest.StartDate, opt => opt.MapFrom(src => src.StartDate))
 				.ForMember(dest => dest.EndDate, opt => opt.MapFrom(src => src.EndDate))
 				.ForMember(dest => dest.DueDate, opt => opt.MapFrom(src => src.DueDate));
 

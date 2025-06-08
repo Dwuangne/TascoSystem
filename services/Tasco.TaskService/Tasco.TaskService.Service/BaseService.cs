@@ -29,20 +29,59 @@ namespace Tasco.TaskService.Service
 
 		protected string GetUserIdFromJwt()
 		{
-			var userId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-			return userId;
+			try
+			{
+				var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+				if (string.IsNullOrEmpty(userId))
+				{
+					_logger.LogWarning("User ID not found in JWT token");
+					return null;
+				}
+				return userId;
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "Error getting user ID from JWT token");
+				return null;
+			}
 		}
 
 		protected string GetUserEmailFromJwt()
 		{
-			var email = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Email)?.Value;
-			return email;
+			try
+			{
+				var email = _httpContextAccessor.HttpContext?.User?.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress")?.Value;
+				if (string.IsNullOrEmpty(email))
+				{
+					_logger.LogWarning("Email not found in JWT token");
+					return null;
+				}
+				return email;
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "Error getting email from JWT token");
+				return null;
+			}
 		}
 
 		protected string GetRoleFromJwt()
 		{
-			string role = _httpContextAccessor?.HttpContext?.User.FindFirstValue(ClaimTypes.Role);
-			return role;
+			try
+			{
+				var role = _httpContextAccessor.HttpContext?.User?.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
+				if (string.IsNullOrEmpty(role))
+				{
+					_logger.LogWarning("Role not found in JWT token");
+					return null;
+				}
+				return role;
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError(ex, "Error getting role from JWT token");
+				return null;
+			}
 		}
 	}
 }

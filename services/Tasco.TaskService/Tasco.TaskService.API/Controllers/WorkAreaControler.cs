@@ -9,11 +9,11 @@ namespace Tasco.TaskService.API.Controllers
 {
     [Route("api/v1/workareas")]
     [ApiController]
-    public class WorkingAreaControler : BaseController<WorkingAreaControler>
+    public class WorkAreaControler : BaseController<WorkAreaControler>
     {
         private readonly IWorkAreaService _workAreaService;
 
-        public WorkingAreaControler(ILogger<WorkingAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService) : base(logger, mapper)
+        public WorkAreaControler(ILogger<WorkAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService) : base(logger, mapper)
         {
             _workAreaService = workAreaService;
         }

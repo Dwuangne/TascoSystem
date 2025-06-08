@@ -12,8 +12,8 @@ using Tasco.TaskService.Repository.Entities;
 namespace Tasco.TaskService.Repository.Migrations
 {
     [DbContext(typeof(TaskManagementDbContext))]
-    [Migration("20250608100201_Init")]
-    partial class Init
+    [Migration("20250608171951_InitMigration")]
+    partial class InitMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,74 @@ namespace Tasco.TaskService.Repository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Tasco.TaskService.Repository.Entities.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TaskId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.HasIndex("TaskId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Tasco.TaskService.Repository.Entities.SubTask", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssigneeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AssigneeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ParentTaskId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentTaskId");
+
+                    b.ToTable("SubTasks");
+                });
 
             modelBuilder.Entity("Tasco.TaskService.Repository.Entities.TaskAction", b =>
                 {
@@ -115,6 +183,10 @@ namespace Tasco.TaskService.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UploadedByUserId");
+
+                    b.HasIndex("UploadedDate");
 
                     b.HasIndex("WorkTaskId");
 
@@ -309,9 +381,37 @@ namespace Tasco.TaskService.Repository.Migrations
 
                     b.HasIndex("CreatedByUserId");
 
+                    b.HasIndex("DueDate");
+
+                    b.HasIndex("Priority");
+
+                    b.HasIndex("Status");
+
                     b.HasIndex("WorkAreaId");
 
                     b.ToTable("WorkTasks");
+                });
+
+            modelBuilder.Entity("Tasco.TaskService.Repository.Entities.Comment", b =>
+                {
+                    b.HasOne("Tasco.TaskService.Repository.Entities.WorkTask", "WorkTask")
+                        .WithMany("Comments")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("WorkTask");
+                });
+
+            modelBuilder.Entity("Tasco.TaskService.Repository.Entities.SubTask", b =>
+                {
+                    b.HasOne("Tasco.TaskService.Repository.Entities.TaskObjective", "Task")
+                        .WithMany("SubTasks")
+                        .HasForeignKey("ParentTaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Task");
                 });
 
             modelBuilder.Entity("Tasco.TaskService.Repository.Entities.TaskAction", b =>
@@ -369,6 +469,11 @@ namespace Tasco.TaskService.Repository.Migrations
                     b.Navigation("WorkArea");
                 });
 
+            modelBuilder.Entity("Tasco.TaskService.Repository.Entities.TaskObjective", b =>
+                {
+                    b.Navigation("SubTasks");
+                });
+
             modelBuilder.Entity("Tasco.TaskService.Repository.Entities.WorkArea", b =>
                 {
                     b.Navigation("WorkTasks");
@@ -376,6 +481,8 @@ namespace Tasco.TaskService.Repository.Migrations
 
             modelBuilder.Entity("Tasco.TaskService.Repository.Entities.WorkTask", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("TaskActions");
 
                     b.Navigation("TaskFiles");

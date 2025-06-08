@@ -18,9 +18,11 @@ namespace Tasco.TaskService.Repository.Entities
         public DbSet<WorkArea> WorkAreas { get; set; }
         public DbSet<WorkTask> WorkTasks { get; set; }
         public DbSet<TaskObjective> TaskObjectives { get; set; }
+        public DbSet<SubTask> SubTasks { get; set; }
         public DbSet<TaskMember> TaskMembers { get; set; }
         public DbSet<TaskFile> TaskFiles { get; set; }
         public DbSet<TaskAction> TaskActions { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -58,9 +60,31 @@ namespace Tasco.TaskService.Repository.Entities
                 .HasForeignKey(ta => ta.WorkTaskId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<WorkTask>()
+                .HasMany(wt => wt.Comments)
+                .WithOne(c => c.WorkTask)
+                .HasForeignKey(c => c.TaskId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // TaskObjective relationships
+            modelBuilder.Entity<TaskObjective>()
+                .HasMany(to => to.SubTasks)
+                .WithOne(st => st.Task)
+                .HasForeignKey(st => st.ParentTaskId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Indexes for better query performance
             modelBuilder.Entity<WorkTask>()
                 .HasIndex(wt => wt.CreatedByUserId);
+
+            modelBuilder.Entity<WorkTask>()
+                .HasIndex(wt => wt.Status);
+
+            modelBuilder.Entity<WorkTask>()
+                .HasIndex(wt => wt.Priority);
+
+            modelBuilder.Entity<WorkTask>()
+                .HasIndex(wt => wt.DueDate);
 
             modelBuilder.Entity<TaskMember>()
                 .HasIndex(tm => tm.UserId);
@@ -74,6 +98,18 @@ namespace Tasco.TaskService.Repository.Entities
 
             modelBuilder.Entity<TaskAction>()
                 .HasIndex(ta => ta.ActionDate);
+
+            modelBuilder.Entity<Comment>()
+                .HasIndex(c => c.UserId);
+
+            modelBuilder.Entity<Comment>()
+                .HasIndex(c => c.CreatedAt);
+
+            modelBuilder.Entity<TaskFile>()
+                .HasIndex(tf => tf.UploadedByUserId);
+
+            modelBuilder.Entity<TaskFile>()
+                .HasIndex(tf => tf.UploadedDate);
 
             // Seed data (optional)
             SeedData(modelBuilder);

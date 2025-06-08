@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Tasco.TaskService.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class InitMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,6 +56,28 @@ namespace Tasco.TaskService.Repository.Migrations
                         name: "FK_WorkTasks_WorkAreas_WorkAreaId",
                         column: x => x.WorkAreaId,
                         principalTable: "WorkAreas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TaskId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comments_WorkTasks_TaskId",
+                        column: x => x.TaskId,
+                        principalTable: "WorkTasks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -161,6 +183,49 @@ namespace Tasco.TaskService.Repository.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "SubTasks",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ParentTaskId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AssigneeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    AssigneeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SubTasks", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SubTasks_TaskObjectives_ParentTaskId",
+                        column: x => x.ParentTaskId,
+                        principalTable: "TaskObjectives",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_CreatedAt",
+                table: "Comments",
+                column: "CreatedAt");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_TaskId",
+                table: "Comments",
+                column: "TaskId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserId",
+                table: "Comments",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SubTasks_ParentTaskId",
+                table: "SubTasks",
+                column: "ParentTaskId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_TaskActions_ActionDate",
                 table: "TaskActions",
@@ -175,6 +240,16 @@ namespace Tasco.TaskService.Repository.Migrations
                 name: "IX_TaskActions_WorkTaskId",
                 table: "TaskActions",
                 column: "WorkTaskId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskFiles_UploadedByUserId",
+                table: "TaskFiles",
+                column: "UploadedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TaskFiles_UploadedDate",
+                table: "TaskFiles",
+                column: "UploadedDate");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TaskFiles_WorkTaskId",
@@ -203,6 +278,21 @@ namespace Tasco.TaskService.Repository.Migrations
                 column: "CreatedByUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_WorkTasks_DueDate",
+                table: "WorkTasks",
+                column: "DueDate");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WorkTasks_Priority",
+                table: "WorkTasks",
+                column: "Priority");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WorkTasks_Status",
+                table: "WorkTasks",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_WorkTasks_WorkAreaId",
                 table: "WorkTasks",
                 column: "WorkAreaId");
@@ -211,6 +301,12 @@ namespace Tasco.TaskService.Repository.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Comments");
+
+            migrationBuilder.DropTable(
+                name: "SubTasks");
+
             migrationBuilder.DropTable(
                 name: "TaskActions");
 

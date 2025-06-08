@@ -38,5 +38,6 @@ namespace Tasco.TaskService.Repository.Entities
         // Foreign key
         [ForeignKey("WorkTaskId")]
         public virtual WorkTask WorkTask { get; set; }
+        public virtual ICollection<SubTask> SubTasks { get; set; } = new List<SubTask>();
     }
 }

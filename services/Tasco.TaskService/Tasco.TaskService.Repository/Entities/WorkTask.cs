@@ -60,5 +60,6 @@ namespace Tasco.TaskService.Repository.Entities
         public virtual ICollection<TaskMember> TaskMembers { get; set; } = new List<TaskMember>();
         public virtual ICollection<TaskFile> TaskFiles { get; set; } = new List<TaskFile>();
         public virtual ICollection<TaskAction> TaskActions { get; set; } = new List<TaskAction>();
+        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

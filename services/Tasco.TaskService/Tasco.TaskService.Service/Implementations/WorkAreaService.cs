@@ -30,6 +30,7 @@ namespace Tasco.TaskService.Service.Implementations
             var entity = _mapper.Map<WorkArea>(workArea);
             var userId = GetUserIdFromJwt();
             var userEmail = GetUserEmailFromJwt();
+            Console.WriteLine($"Creating work area for user {userEmail} with ID {userId}");
             if (userId == null)
             {
                 throw new UnauthorizedAccessException("User is not authenticated.");

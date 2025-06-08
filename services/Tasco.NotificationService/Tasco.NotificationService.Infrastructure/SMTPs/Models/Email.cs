@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasco.NotificationService.Worker.SMTPs.Models
+namespace Tasco.NotificationService.Infrastructure.SMTPs.Models
 {
     public class Email
     {

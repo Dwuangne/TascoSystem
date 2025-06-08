@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasco.NotificationService.Worker.Messaging.Interface
+namespace Tasco.NotificationService.Core.Interfaces
 {
     public interface IRabbitMQConnection
     {
         IConnection GetConnection();
     }
-
 }

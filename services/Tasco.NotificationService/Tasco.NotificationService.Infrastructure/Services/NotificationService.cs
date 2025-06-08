@@ -1,9 +1,8 @@
 using Microsoft.Extensions.Logging;
-using Tasco.NotificationService.Worker.Channels.Interface;
-using Tasco.NotificationService.Worker.Services.Interfaces;
-using Tasco.NotificationService.Worker.Models;
+using Tasco.NotificationService.Core.Interfaces;
+using Tasco.NotificationService.Core.Models;
 
-namespace Tasco.NotificationService.Worker.Services
+namespace Tasco.NotificationService.Infrastructure.Services
 {
     public class NotificationService : INotificationService
     {

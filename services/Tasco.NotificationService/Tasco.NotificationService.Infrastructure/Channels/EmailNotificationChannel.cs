@@ -1,11 +1,11 @@
 using Microsoft.Extensions.Logging;
 using System.Net.Mail;
-using Tasco.NotificationService.Worker.SMTPs.Repositories;
-using Tasco.NotificationService.Worker.Channels.Interface;
-using Tasco.NotificationService.Worker.Services.Interfaces;
-using Tasco.NotificationService.Worker.Models;
+using System.Net.Mime;
+using Tasco.NotificationService.Infrastructure.SMTPs.Repositories;
+using Tasco.NotificationService.Core.Interfaces;
+using Tasco.NotificationService.Core.Models;
 
-namespace Tasco.NotificationService.Worker.Channels
+namespace Tasco.NotificationService.Infrastructure.Channels
 {
     public class EmailNotificationChannel : IEmailNotificationChannel
     {
@@ -59,8 +59,8 @@ namespace Tasco.NotificationService.Worker.Channels
                 // Generate email content using template service
                 var emailContent = await GenerateEmailContentAsync(notification);
                 
-                // Send email
-                await SendEmailAsync(userEmail, emailContent.Subject, emailContent.Body, cancellationToken);
+                // Send email with embedded logo
+                await SendEmailWithLogoAsync(userEmail, emailContent.Subject, emailContent.Body, cancellationToken);
 
                 result.IsSuccess = true;
                 result.ExternalId = notification.Id; // Use notification ID as external reference
@@ -102,13 +102,7 @@ namespace Tasco.NotificationService.Worker.Channels
                     return result;
                 }
 
-                using var mailMessage = new MailMessage();
-                mailMessage.To.Add(to);
-                mailMessage.Subject = subject;
-                mailMessage.Body = body;
-                mailMessage.IsBodyHtml = true; // Support HTML content
-
-                await _emailRepository.SendEmailAsync(mailMessage);
+                await SendEmailWithLogoAsync(to, subject, body, cancellationToken);
 
                 result.IsSuccess = true;
                 result.ExternalId = Guid.NewGuid().ToString(); // Generate unique ID for tracking
@@ -122,6 +116,107 @@ namespace Tasco.NotificationService.Worker.Channels
                 result.ErrorMessage = ex.Message;
                 _logger.LogError(ex, "Failed to send email to {Email}", to);
                 return result;
+            }
+        }
+
+        // ✅ New method to send email with embedded logo
+        private async Task SendEmailWithLogoAsync(string to, string subject, string body, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                using var mailMessage = new MailMessage();
+                mailMessage.To.Add(to);
+                mailMessage.Subject = subject;
+                mailMessage.IsBodyHtml = true;
+
+                // Create HTML view with embedded logo
+                var htmlView = AlternateView.CreateAlternateViewFromString(body, null, MediaTypeNames.Text.Html);
+                
+                // Attach logo as embedded resource
+                await AttachLogoToEmail(htmlView);
+                
+                mailMessage.AlternateViews.Add(htmlView);
+
+                await _emailRepository.SendEmailAsync(mailMessage);
+                
+                _logger.LogInformation("Email with embedded logo sent successfully to {Email}", to);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to send email with logo to {Email}", to);
+                throw;
+            }
+        }
+
+        // ✅ Method to attach logo as embedded resource
+        private async Task AttachLogoToEmail(AlternateView htmlView)
+        {
+            try
+            {
+                // Path to logo file - try multiple locations
+                var logoPaths = new[]
+                {
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "Logos", "Tasco.png"),
+                    Path.Combine(Directory.GetCurrentDirectory(), "Assets", "Logos", "Tasco.png"),
+                    Path.Combine(Environment.CurrentDirectory, "Assets", "Logos", "Tasco.png"),
+                    "./Assets/Logos/Tasco.png",
+                    "../Assets/Logos/Tasco.png",
+                    "/app/Assets/Logos/Tasco.png"  // Docker path
+                };
+
+                foreach (var logoPath in logoPaths)
+                {
+                    _logger.LogInformation("Checking logo path: {LogoPath}", logoPath);
+                    
+                    if (File.Exists(logoPath))
+                    {
+                        // Create linked resource for logo
+                        var logoResource = new LinkedResource(logoPath, MediaTypeNames.Image.Png)
+                        {
+                            ContentId = "tasco_logo"  // This matches the 'cid:tasco_logo' in HTML
+                        };
+
+                        htmlView.LinkedResources.Add(logoResource);
+                        _logger.LogInformation("Logo attached successfully from: {LogoPath}", logoPath);
+                        return;
+                    }
+                }
+
+                _logger.LogWarning("Logo file not found in any location. Email will be sent without logo.");
+                LogAvailableFiles();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error attaching logo to email");
+            }
+        }
+
+        private void LogAvailableFiles()
+        {
+            try
+            {
+                var currentDir = Directory.GetCurrentDirectory();
+                _logger.LogInformation("Current directory: {CurrentDir}", currentDir);
+                
+                var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                _logger.LogInformation("Base directory: {BaseDir}", baseDir);
+
+                // Log files in current directory
+                if (Directory.Exists(currentDir))
+                {
+                    var files = Directory.GetFiles(currentDir, "*", SearchOption.AllDirectories)
+                        .Where(f => f.Contains("Assets") || f.Contains("Logo") || f.Contains("Tasco") || f.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                        .Take(10);
+                    
+                    foreach (var file in files)
+                    {
+                        _logger.LogInformation("Found: {File}", file);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error logging available files");
             }
         }
 

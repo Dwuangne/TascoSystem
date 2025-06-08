@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tasco.NotificationService.Worker.Messaging.Interface;
+using Tasco.NotificationService.Core.Interfaces;
 
-namespace Tasco.NotificationService.Worker.Messaging
+namespace Tasco.NotificationService.Infrastructure.Messaging
 {
     public class RabbitMQConnection : IRabbitMQConnection, IDisposable
     {

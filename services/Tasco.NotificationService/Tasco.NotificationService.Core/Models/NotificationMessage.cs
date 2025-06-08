@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasco.NotificationService.Worker.Models
+namespace Tasco.NotificationService.Core.Models
 {
     public class NotificationMessage
     {

@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasco.NotificationService.Worker.SMTPs.Repositories
+namespace Tasco.NotificationService.Infrastructure.SMTPs.Repositories
 {
     public interface IEmailRepository
     {

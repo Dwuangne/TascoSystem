@@ -1,6 +1,6 @@
-using Tasco.NotificationService.Worker.Models;
+using Tasco.NotificationService.Core.Models;
 
-namespace Tasco.NotificationService.Worker.Services.Interfaces
+namespace Tasco.NotificationService.Core.Interfaces
 {
     public interface INotificationService
     {

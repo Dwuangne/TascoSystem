@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tasco.NotificationService.Worker.Models;
+using Tasco.NotificationService.Core.Models;
 
-namespace Tasco.NotificationService.Worker.Channels.Interface
+namespace Tasco.NotificationService.Core.Interfaces
 {
     public interface INotificationChannel
     {

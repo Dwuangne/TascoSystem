@@ -1,0 +1,18 @@
+{
+  "id": "real-email-test-20241204",
+  "userId": "moneymind392@gmail.com",
+  "title": "🎯 Real Email Test - Tasco Notification System",
+  "message": "This is a real email test from your Tasco Notification Service! If you receive this email, it means the integration between RabbitMQ, notification worker, and Gmail SMTP is working perfectly. The system is ready for production use!",
+  "type": 0,
+  "projectId": "email-integration-test",
+  "taskId": "real-smtp-test",
+  "createdAt": "2024-12-04T17:30:00Z",
+  "isRead": false,
+  "metadata": {
+    "email": "moneymind392@gmail.com",
+    "testMode": false,
+    "source": "ProductionTest"
+  },
+  "priority": 3,
+  "channels": [1]
+} 

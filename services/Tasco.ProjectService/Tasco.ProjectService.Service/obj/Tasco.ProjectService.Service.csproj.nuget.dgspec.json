@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\Tasco.ProjectService.Service.csproj": {}
+    "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\Tasco.ProjectService.Service.csproj": {}
   },
   "projects": {
-    "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Repository\\Tasco.ProjectService.Repository.csproj": {
+    "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\Tasco.ProjectService.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Repository\\Tasco.ProjectService.Repository.csproj",
-        "projectName": "Tasco.ProjectService.Repository",
-        "projectPath": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Repository\\Tasco.ProjectService.Repository.csproj",
-        "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
-        "outputPath": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Repository\\obj\\",
+        "projectUniqueName": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\Tasco.ProjectService.Service.csproj",
+        "projectName": "Tasco.ProjectService.Service",
+        "projectPath": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\Tasco.ProjectService.Service.csproj",
+        "packagesPath": "C:\\Users\\ngoxu\\.nuget\\packages\\",
+        "outputPath": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngoxu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

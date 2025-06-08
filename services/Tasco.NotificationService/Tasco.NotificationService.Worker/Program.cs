@@ -1,11 +1,14 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Tasco.NotificationService.Worker;
 using Tasco.NotificationService.Worker.Consumers;
-using Tasco.NotificationService.Core.Interfaces;
-using Tasco.NotificationService.Infrastructure.Messaging;
-using Tasco.NotificationService.Infrastructure.Services;
-using Tasco.NotificationService.Infrastructure.Channels;
-using Tasco.NotificationService.Infrastructure.SMTPs.Repositories;
+using Tasco.NotificationService.Worker.Messaging.Interface;
+using Tasco.NotificationService.Worker.Messaging;
+using Tasco.NotificationService.Worker.Services.Interfaces;
+using Tasco.NotificationService.Worker.Services;
+using Tasco.NotificationService.Worker.Channels.Interface;
+using Tasco.NotificationService.Worker.Channels;
+using Tasco.NotificationService.Service.Services;
+using Tasco.NotificationService.Worker.SMTPs.Repositories;
 using DotNetEnv;
 using Microsoft.Extensions.Configuration;
 
@@ -21,7 +24,6 @@ builder.Configuration.AddEnvironmentVariables();
 builder.Services.AddSingleton<IRabbitMQConnection, RabbitMQConnection>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<INotificationTemplateService, NotificationTemplateService>();
-
 builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 // Register notification channels

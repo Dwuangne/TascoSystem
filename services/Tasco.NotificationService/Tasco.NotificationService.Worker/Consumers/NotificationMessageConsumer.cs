@@ -5,9 +5,10 @@ using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Tasco.NotificationService.Core.Interfaces;
-using Tasco.NotificationService.Core.Models;
-using Tasco.NotificationService.Worker.Constants;
+using Tasco.NotificationService.Worker.Messaging.Interface;
+using Tasco.NotificationService.Worker.Services.Interfaces;
+using Tasco.NotificationService.Worker.Models;
+using Tasco.NotificationService.Shared.Constants;
 
 namespace Tasco.NotificationService.Worker.Consumers
 {

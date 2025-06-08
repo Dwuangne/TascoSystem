@@ -2,22 +2,29 @@
   "format": 1,
   "restore": {
     "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj": {}
+    "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj": {}
   },
   "projects": {
     "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj": {
+    "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj": {
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj",
+        "projectUniqueName": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj",
         "projectName": "Tasco.ProjectService.API",
         "projectPath": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj",
         "packagesPath": "C:\\Users\\subih\\.nuget\\packages\\",
         "outputPath": "E:\\TERM8\\PRN232\\ass\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\obj\\",
+        "projectPath": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\Tasco.ProjectService.API.csproj",
+        "packagesPath": "C:\\Users\\ngoxu\\.nuget\\packages\\",
+        "outputPath": "E:\\TascoSystem\\services\\Tasco.ProjectService\\Tasco.ProjectService.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\subih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngoxu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -249,6 +256,7 @@
               "privateAssets": "all"
             }
           },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }

@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using Tasco.NotificationService.Worker.SMTPs.Models;
+using Tasco.NotificationService.Infrastructure.SMTPs.Models;
 
-namespace Tasco.NotificationService.Worker.SMTPs.Repositories
+namespace Tasco.NotificationService.Infrastructure.SMTPs.Repositories
 {
     public class EmailRepository : IEmailRepository
     {
@@ -55,12 +56,22 @@ namespace Tasco.NotificationService.Worker.SMTPs.Repositories
         {
             ValidateEmailSettings();
 
-            return new SmtpClient(_emailSettings.Host, _emailSettings.Port)
+            var smtpClient = new SmtpClient(_emailSettings.Host, _emailSettings.Port)
             {
                 Credentials = new NetworkCredential(_emailSettings.Sender, _emailSettings.Password),
                 EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Timeout = 30000 // 30 seconds timeout
             };
+
+            // Additional settings for Gmail SMTP
+            if (_emailSettings.Host.Contains("gmail"))
+            {
+                smtpClient.TargetName = "STARTTLS/smtp.gmail.com";
+            }
+
+            return smtpClient;
         }
 
         private void ValidateEmailSettings()

@@ -445,6 +445,14 @@ tmp/
 
 # Docker files (if using containers)
 docker-compose.override.yml
+docker-compose.override.*.yml
+docker-compose.local.yml
+docker-compose.dev.yml
+docker-compose.development.yml
+docker-compose.prod.yml
+docker-compose.production.yml
+docker-compose.staging.yml
+docker-compose.test.yml
 .dockerignore
 
 # Package files

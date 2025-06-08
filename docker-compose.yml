@@ -4,7 +4,7 @@ services:
     container_name: rabbitmq
     hostname: rabbitmq
     ports:
-      - "5672:5672" # AMQP port
+      - "5673:5672" # AMQP port
       - "15672:15672" # Management UI port
     environment:
       - RABBITMQ_DEFAULT_USER=admin
@@ -31,6 +31,12 @@ services:
       - RabbitMQ__Port=5672
       - RabbitMQ__UserName=admin
       - RabbitMQ__Password=admin123
+      # Email Configuration for testing (replace with real values)
+      - Email__Host=smtp.gmail.com
+      - Email__Port=587
+      - Email__SystemName=Tasco Notification System
+      - Email__Sender=moneymind392@gmail.com
+      - Email__Password=jhxa qrsl bcru ihra
     networks:
       - tasco-network
 

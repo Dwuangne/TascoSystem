@@ -1,4 +1,37 @@
+version: '3.8'
+
 services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password123@"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1434:1433"
+    restart: always
+    networks:
+      - app-network
+
+  projectservice:
+    build:
+      context: ./services/Tasco.ProjectService/Tasco.ProjectService.API
+      dockerfile: Dockerfile
+    container_name: projectservice
+    environment:
+      - ConnectionStrings__DefaultConnectionString=Server=sqlserver;Database=ProjectDb;User Id=sa;Password=Password123@;TrustServerCertificate=True
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080;https://+:8081
+    depends_on:
+      - sqlserver
+    ports:
+      - "5001:8080"   # HTTP
+      - "5002:8081"   # gRPC
+    restart: always
+    networks:
+      - app-network
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -10,7 +43,7 @@ services:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin123
     networks:
-      - tasco-network
+      - app-network
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
       interval: 5s
@@ -31,15 +64,9 @@ services:
       - RabbitMQ__Port=5672
       - RabbitMQ__UserName=admin
       - RabbitMQ__Password=admin123
-      # Email Configuration for testing (replace with real values)
-      - Email__Host=smtp.gmail.com
-      - Email__Port=587
-      - Email__SystemName=Tasco Notification System
-      - Email__Sender=moneymind392@gmail.com
-      - Email__Password=jhxa qrsl bcru ihra
     networks:
-      - tasco-network
+      - app-network
 
 networks:
-  tasco-network:
+  app-network:
     driver: bridge

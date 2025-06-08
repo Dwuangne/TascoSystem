@@ -444,6 +444,8 @@ tmp/
 *.tmp
 
 # Docker files (if using containers)
+docker-compose.yml
+docker-compose.yaml
 docker-compose.override.yml
 docker-compose.override.*.yml
 docker-compose.local.yml

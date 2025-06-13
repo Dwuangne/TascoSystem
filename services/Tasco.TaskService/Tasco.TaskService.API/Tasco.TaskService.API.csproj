@@ -27,6 +27,7 @@
 		<Protobuf Include="Protos\worktask.proto" GrpcServices="Server" />
 		<Protobuf Include="Protos\workarea.proto" GrpcServices="Server" />
 		<Protobuf Include="Protos\taskaction.proto" GrpcServices="Server" />
+		<Protobuf Include="Protos\project.proto" GrpcServices="Client" />
 	</ItemGroup>
 
 	<ItemGroup>

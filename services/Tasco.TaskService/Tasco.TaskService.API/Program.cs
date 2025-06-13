@@ -10,20 +10,9 @@ using Tasco.TaskService.Repository.Entities;
 using Tasco.TaskService.Repository.UnitOfWork;
 using Tasco.TaskService.Service.Implementations;
 using Tasco.TaskService.Service.Interfaces;
-using DotNetEnv;
-namespace Tasco.TaskService.API
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+using Tasco.TaskService.Service.Services;
 
-            // Load .env file
-            Env.Load();
-
-            // Add configuration from .env
-            builder.Configuration.AddEnvironmentVariables();
+var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllers();
@@ -43,10 +32,13 @@ namespace Tasco.TaskService.API
             // Add AutoMapper
             builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
-            // Add Services
-            builder.Services.AddScoped<IWorkTaskService, WorkTaskService>();
-            builder.Services.AddScoped<ITaskActionService, TaskActionService>();
-            builder.Services.AddScoped<IWorkAreaService, WorkAreaService>();
+// Add Services
+builder.Services.AddScoped<IWorkTaskService, WorkTaskService>();
+builder.Services.AddScoped<ITaskActionService, TaskActionService>();
+builder.Services.AddScoped<IWorkAreaService, WorkAreaService>();
+builder.Services.AddScoped<IWorkTaskService, WorkTaskService>();
+builder.Services.AddScoped<ITaskMemberService, TaskMemberService>();
+builder.Services.AddScoped<ProjectGrpcClient>();
 
             // Add HttpContextAccessor
             builder.Services.AddHttpContextAccessor();

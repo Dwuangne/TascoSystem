@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tasco.TaskService.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45bc3d15d322ac35e4b33927748f4395555a5589")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e218c4c58c8ad2fcf6faf757523ca3751dfba8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tasco.TaskService.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tasco.TaskService.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

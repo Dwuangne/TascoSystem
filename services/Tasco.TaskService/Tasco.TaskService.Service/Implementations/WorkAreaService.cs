@@ -12,10 +12,13 @@ using Tasco.TaskService.Repository.UnitOfWork;
 using Tasco.TaskService.Service.BusinessModels;
 using Tasco.TaskService.Service.Interfaces;
 
+
 namespace Tasco.TaskService.Service.Implementations
 {
     public class WorkAreaService : BaseService<WorkAreaService>, IWorkAreaService
     {
+
+
         public WorkAreaService(
             IUnitOfWork<TaskManagementDbContext> unitOfWork,
             ILogger<WorkAreaService> logger,
@@ -25,8 +28,13 @@ namespace Tasco.TaskService.Service.Implementations
         {
         }
 
-        public async Task<WorkArea> CreateWorkArea(WorkAreaBusinessModel workArea)
+        public async Task<WorkArea> CreateWorkArea(WorkAreaBusinessModel workArea, bool projectExists)
         {
+            // Check if project exists
+            if (!projectExists)
+            {
+                throw new KeyNotFoundException($"Project with ID {workArea.ProjectId} not found.");
+            }
             var entity = _mapper.Map<WorkArea>(workArea);
             var userId = GetUserIdFromJwt();
             var userEmail = GetUserEmailFromJwt();

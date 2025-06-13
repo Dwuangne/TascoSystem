@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Tasco.TaskService.API.Payload.Request;
 using Tasco.TaskService.Service.BusinessModels;
 using Tasco.TaskService.Service.Interfaces;
+using Tasco.TaskService.Service.Services;
 
 namespace Tasco.TaskService.API.Controllers
 {
@@ -12,10 +13,12 @@ namespace Tasco.TaskService.API.Controllers
     public class WorkAreaControler : BaseController<WorkAreaControler>
     {
         private readonly IWorkAreaService _workAreaService;
+        private readonly ProjectGrpcClient _projectGrpcClient;
 
-        public WorkAreaControler(ILogger<WorkAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService) : base(logger, mapper)
+        public WorkingAreaControler(ILogger<WorkingAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService, ProjectGrpcClient projectGrpcClient) : base(logger, mapper)
         {
             _workAreaService = workAreaService;
+            _projectGrpcClient = projectGrpcClient;
         }
 
         [HttpGet]
@@ -43,12 +46,14 @@ namespace Tasco.TaskService.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWorkingArea([FromBody] WorkAreaRequest workArea)
         {
-            if (workArea == null)
+
+            var projectExists = await _projectGrpcClient.CheckProjectExistsAsync(workArea.ProjectId);
+            if (!projectExists)
             {
-                return BadRequest("Work area data is required.");
+                throw new KeyNotFoundException($"Project with ID {workArea.ProjectId} not found.");
             }
             var mappedWorkArea = _mapper.Map<WorkAreaBusinessModel>(workArea);
-            var createdWorkArea = await _workAreaService.CreateWorkArea(mappedWorkArea);
+            var createdWorkArea = await _workAreaService.CreateWorkArea(mappedWorkArea, projectExists);
             return CreatedAtAction(nameof(GetWorkingAreaById), new { id = createdWorkArea.Id }, createdWorkArea);
         }
         [HttpPut("{id}")]

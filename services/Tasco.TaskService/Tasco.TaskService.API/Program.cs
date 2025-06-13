@@ -8,6 +8,7 @@ using Tasco.TaskService.Repository.Entities;
 using Tasco.TaskService.Repository.UnitOfWork;
 using Tasco.TaskService.Service.Implementations;
 using Tasco.TaskService.Service.Interfaces;
+using Tasco.TaskService.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +34,9 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 builder.Services.AddScoped<IWorkTaskService, WorkTaskService>();
 builder.Services.AddScoped<ITaskActionService, TaskActionService>();
 builder.Services.AddScoped<IWorkAreaService, WorkAreaService>();
+builder.Services.AddScoped<IWorkTaskService, WorkTaskService>();
+builder.Services.AddScoped<ITaskMemberService, TaskMemberService>();
+builder.Services.AddScoped<ProjectGrpcClient>();
 
 // Add HttpContextAccessor
 builder.Services.AddHttpContextAccessor();

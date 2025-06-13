@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Tasco.TaskService.API.Protos";
+
+package project;
+
+service ProjectService {
+  rpc CheckProjectExists (ProjectRequestById) returns (ProjectExistsResponse);
+}
+
+message ProjectRequestById {
+  string id = 1;
+}
+
+message ProjectExistsResponse {
+  bool exists = 1;
+} 

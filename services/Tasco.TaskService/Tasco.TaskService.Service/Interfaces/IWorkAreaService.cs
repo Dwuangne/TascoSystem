@@ -13,7 +13,7 @@ namespace Tasco.TaskService.Service.Interfaces
         Task<WorkArea> GetWorkAreaById(Guid id);
         Task<IPaginate<WorkArea>> GetAllWorkAreas(int pageSize, int pageIndex, string search = null);
         Task<IPaginate<WorkArea>> GetMyWorkAreas(int pageSize, int pageIndex, string search = null);
-        Task<WorkArea> CreateWorkArea(WorkAreaBusinessModel workArea);
+        Task<WorkArea> CreateWorkArea(WorkAreaBusinessModel workArea, bool projectExists);
         Task UpdateWorkArea(Guid id, WorkAreaBusinessModel workArea);
         Task DeleteWorkArea(Guid id);
     }

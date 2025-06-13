@@ -1,7 +1,32 @@
 # =========================
 # .NET Core / ASP.NET Core
 # =========================
+# VS folder (with all subfolders)
+.vs/
+**/.vs/
 
+# VS cache directories
+.vs/**/
+**/.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+**/*.userprefs
+
+# VS project-specific hidden files
+**/.vs/ProjectSettings.json
+**/.vs/slnx.sqlite
+**/.vs/VSWorkspaceState.json
+**/.vs/config/applicationhost.config
+
+# VS build log files
+**/.vs/log/
+
+# VS temporary performance metrics
+**/.vs/DesignTimeBuild/
+
+# VS test runner results
+**/.vs/TestStore/
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

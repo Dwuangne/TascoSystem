@@ -14,8 +14,7 @@ namespace Tasco.TaskService.API.Controllers
     {
         private readonly IWorkAreaService _workAreaService;
         private readonly ProjectGrpcClient _projectGrpcClient;
-
-        public WorkingAreaControler(ILogger<WorkingAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService, ProjectGrpcClient projectGrpcClient) : base(logger, mapper)
+        public WorkAreaControler(ILogger<WorkAreaControler> logger, IMapper mapper, IWorkAreaService workAreaService, ProjectGrpcClient projectGrpcClient) : base(logger, mapper)
         {
             _workAreaService = workAreaService;
             _projectGrpcClient = projectGrpcClient;

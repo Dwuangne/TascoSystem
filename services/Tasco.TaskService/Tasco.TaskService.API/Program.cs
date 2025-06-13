@@ -11,8 +11,14 @@ using Tasco.TaskService.Repository.UnitOfWork;
 using Tasco.TaskService.Service.Implementations;
 using Tasco.TaskService.Service.Interfaces;
 using Tasco.TaskService.Service.Services;
+namespace Tasco.TaskService.API
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
 
-var builder = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllers();

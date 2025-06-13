@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\TascoSystem\\services\\Tasco.TaskService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|d:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|d:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|d:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|d:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|solutionrelative:tasco.taskservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:1:0:{1CB1C1F7-93D9-4873-94FD-9BF804DC7074}|Tasco.TaskService.API\\Tasco.TaskService.API.csproj|d:\\tascosystem\\services\\tasco.taskservice\\tasco.taskservice.api\\grpcservices\\projectgrpcclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,11 +121,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1070,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WorkAreaControler.cs",
               "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Controllers\\WorkAreaControler.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Controllers\\WorkAreaControler.cs",
@@ -138,13 +138,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\appsettings.json",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\appsettings.json",
               "ToolTip": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\appsettings.json",
               "RelativeToolTip": "Tasco.TaskService.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-13T11:26:41.339Z",
               "EditorCaption": ""
@@ -188,6 +188,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
+              "RelativeDocumentMoniker": "Tasco.TaskService.API\\Program.cs",
+              "ToolTip": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
+              "RelativeToolTip": "Tasco.TaskService.API\\Program.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwGQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:00:23.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "TaskActionGrpcService.cs",
               "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\GrpcServices\\TaskActionGrpcService.cs",
@@ -201,20 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
-              "RelativeDocumentMoniker": "Tasco.TaskService.API\\Program.cs",
-              "ToolTip": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Program.cs",
-              "RelativeToolTip": "Tasco.TaskService.API\\Program.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAcwFwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:00:23.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BaseController.cs",
               "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Controllers\\BaseController.cs",
@@ -227,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TaskMemberController.cs",
               "DocumentMoniker": "D:\\TascoSystem\\services\\Tasco.TaskService\\Tasco.TaskService.API\\Controllers\\TaskMemberController.cs",
               "RelativeDocumentMoniker": "Tasco.TaskService.API\\Controllers\\TaskMemberController.cs",
